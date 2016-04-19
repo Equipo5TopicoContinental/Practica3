@@ -167,40 +167,46 @@ void blue_off(){
 	BLUE_OFF;
 }
 
-void set_color(COLOR c){
+void set_color(COLOR c,T_UBYTE vol){
+	static T_UBYTE cont=0;
+	cont++;
+	cont %=100;
+	
 	leds_off();
-	switch(c){
-	case LED_RED:
-		red_on();
-		break;
-	case LED_GREEN:
-		green_on();
-		break;
-	case LED_BLUE:
-		blue_on();
-		break;
-	case LED_CYAN:
-		green_on();
-		blue_on();
-		break;
-	case LED_MAGENTA:
-		red_on();
-		blue_on();
-		break;
-	case LED_YELLOW:
-		
-		green_on();
-		red_on();
-		break;
-	case LED_WHITE:
-		red_on();
-		green_on();
-		blue_on();
-		break;
-	case LED_OFF:
-		leds_off();
-		break;
-	}
+	if(cont % vol !=0){
+		switch(c){
+		case LED_RED:
+			red_on();
+			break;
+		case LED_GREEN:
+			green_on();
+			break;
+		case LED_BLUE:
+			blue_on();
+			break;
+		case LED_CYAN:
+			green_on();
+			blue_on();
+			break;
+		case LED_MAGENTA:
+			red_on();
+			blue_on();
+			break;
+		case LED_YELLOW:		
+			green_on();
+			red_on();
+			break;
+		case LED_WHITE:
+			red_on();
+			green_on();
+			blue_on();
+			break;
+		case LED_OFF:
+			leds_off();
+			break;
+		}
+	}else{}
+
 }
 
 void leds_off(void){

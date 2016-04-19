@@ -14,7 +14,7 @@
 #define MAX_RWD_TIME 5
 #define MAX_VOL 10
 #define MIN_VOL 2
-#define NUM_TRACKS 3
+#define NUM_TRACKS 5
 #define MAX_TRACK_TIME 30
 #define TICS_PER_SEC 1200
 
