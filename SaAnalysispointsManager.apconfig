@@ -1,6 +1,6 @@
 <Analysispoints>
 	<Name>AnalysispointsManager</Name>
-	<ProjectPath>E:/Proyectos/Conti/gsc_sch_MKL25Z/SaAnalysispointsManager.apconfig</ProjectPath>
+	<ProjectPath>D:/Proyectos/Continental/Practica3/SaAnalysispointsManager.apconfig</ProjectPath>
 	<MaxNumberOfCores>1</MaxNumberOfCores>
 	<Comments>Analysispoints Manager</Comments>
 	<IgnoreAll>false</IgnoreAll>

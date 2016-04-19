@@ -41,21 +41,7 @@
  **************************************************************/
  void periodic_tasks_exec_5tks(void)
  {
-
-	 T_BOOL PlayState = PlayButtonState();
-	 if(PlayState){
-		 test_pwm();
-	 }
-
-	 T_BOOL StopState = StopButtonState();
-	 if(StopState){
-		 app_rgb_led_fsm();
-	 }
-
-	 T_BOOL VolUp = VolUpButtonState();
-	 if(VolUp){
-		 test_pwm();
-	 }
+	 SenseButtons();
  }
  
  /**************************************************************

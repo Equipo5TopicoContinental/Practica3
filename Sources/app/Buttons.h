@@ -17,4 +17,6 @@ T_BOOL StopButtonState(void);
 T_BOOL VolUpButtonState(void);
 T_BOOL VolDownButtonState(void);
 
+void SenseButtons(void);
+
 #endif /* BUTTONS_H_ */
