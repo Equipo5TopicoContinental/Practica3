@@ -52,6 +52,7 @@ void periodic_tasks_init_SysDrvs(void)
 {
 	init_leds();
 	InitButtons();
+	Player_Init();
 }
 
 /**************************************************************

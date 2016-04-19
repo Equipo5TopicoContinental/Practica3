@@ -135,17 +135,12 @@ void SenseButtons(void){
 		if((stopActive + volDownActive + volUpActive) == 0 ){
 			if(playTicks > longpush_ticks){
 				//long push
-				red_off();
-				green_off();
-				blue_off();
+				PlayPauseReq();
 			}else{
-				//normal push
-				red_on();
+				PlayPauseReq();
 			}
 		}else{
 			//				More than one button pressed
-
-
 		}
 		playActive=0,stopActive=0,volDownActive=0, volUpActive=0;
 		playTicks = 0; //Reset
@@ -162,16 +157,13 @@ void SenseButtons(void){
 		if((playActive + volDownActive + volUpActive) == 0){
 			if(stopTicks > longpush_ticks){
 				//long push
-				red_off();
-				green_off();
-				blue_off();
+				StopReq();
 			}else{
 				//normal push
-				green_on();
+				StopReq();
 			}
 		}else{
 			//				More than one button pressed
-
 		}
 		playActive=0,stopActive=0,volDownActive=0, volUpActive=0;
 		stopTicks = 0; //Reset
@@ -188,16 +180,13 @@ void SenseButtons(void){
 		if((playActive + volDownActive + stopActive) == 0){
 			if(volUpTicks > longpush_ticks){
 				//long push
-				red_off();
-				green_off();
-				blue_off();
+				FwdReq();
 			}else{
 				//normal push
-				blue_on();
+				VolUpReq();
 			}
 		}else{
 			//				More than one button pressed
-
 		}
 		playActive=0,stopActive=0,volDownActive=0, volUpActive=0;
 		volUpTicks = 0; //Reset
@@ -214,17 +203,13 @@ void SenseButtons(void){
 		if((playActive + stopActive + volUpActive) == 0){
 			if(volDownTicks > longpush_ticks){
 				//long push
-				red_off();
-				green_off();
-				blue_off();
+				RwdReq();
 			}else{
 				//normal push
-				blue_on();
+				VolDownReq();
 			}
 		}else{
 			//				More than one button pressed
-
-
 		}
 		playActive=0,stopActive=0,volDownActive=0, volUpActive=0;
 		volDownTicks = 0; //Reset

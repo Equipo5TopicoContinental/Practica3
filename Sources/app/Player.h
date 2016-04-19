@@ -12,6 +12,12 @@
 
 #define ticks_per_call 5
 #define MAX_RWD_TIME 5
+#define MAX_VOL 10
+#define MIN_VOL 2
+#define NUM_TRACKS 3
+#define MAX_TRACK_TIME 30
+#define TICS_PER_SEC 1200
+
 
 typedef enum {
 	PLAY=0,
@@ -39,6 +45,7 @@ void Player_Rwd(void);
 void Player_ResetTrack(void);
 void Player_Init(void);
 void Player_ResetPlaylist(void);
+void Player_Update(void);
 
 
 

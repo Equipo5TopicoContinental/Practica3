@@ -42,6 +42,7 @@
  void periodic_tasks_exec_5tks(void)
  {
 	 SenseButtons();
+	 Player_Update();
  }
  
  /**************************************************************

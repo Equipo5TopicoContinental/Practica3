@@ -10,6 +10,7 @@
 
 #include "derivative.h" /* include peripheral declarations */
 #include "stdtypedef.h"
+#include "RGB_LEDs.h"
 
 #define SLOW_BLINK      (10000000)
 #define FAST_BLINK      (1000000)
@@ -164,6 +165,48 @@ void blue_on(){
 
 void blue_off(){
 	BLUE_OFF;
+}
+
+void set_color(COLOR c){
+	leds_off();
+	switch(c){
+	case LED_RED:
+		red_on();
+		break;
+	case LED_GREEN:
+		green_on();
+		break;
+	case LED_BLUE:
+		blue_on();
+		break;
+	case LED_CYAN:
+		green_on();
+		blue_on();
+		break;
+	case LED_MAGENTA:
+		red_on();
+		blue_on();
+		break;
+	case LED_YELLOW:
+		
+		green_on();
+		red_on();
+		break;
+	case LED_WHITE:
+		red_on();
+		green_on();
+		blue_on();
+		break;
+	case LED_OFF:
+		leds_off();
+		break;
+	}
+}
+
+void leds_off(void){
+	green_off();
+	red_off();
+	blue_off();
 }
 
 /********************************************************************/
