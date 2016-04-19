@@ -16,7 +16,6 @@ void VolUpReq(void);
 void VolDownReq(void);
 void FwdReq(void);
 void RwdReq(void);
-void TrackEnd(void);
 
 
 #endif /* PLAYER_FSM_H_ */
